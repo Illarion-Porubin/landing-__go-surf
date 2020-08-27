@@ -53,6 +53,27 @@ li{
   }
 }
 
+.headline-right{
+  font-size: 22px;
+  line-height: 32px;
+  letter-spacing: 7.33333px;
+  color: #FFFFFF;
+  opacity: 0.5;
+  padding-right: 103px;
+  position: relative;
+  display: inline-block; /*можно применять блочные стили*/
+
+  &::before{
+    content: "";  
+    position: absolute;
+    width: 80px;
+    height: 1px;
+    background-color: #fff;
+    right: 0;
+    top: 50%;
+  }
+}
+
 .title{
   span{
     font-size: 200px;
@@ -96,6 +117,19 @@ li{
     }
 }
 
+.descr{
+  display: inline-block;
+  padding-left: 5px;
+  // чтобы поставить текст вправо выставляем d:i-b и t-a:r 
+    &__head{
+      font-weight:800;
+      font-size: 40px;
+      span{
+        font-weight: 100;
+    }
+  }
+}
+
 .btn{
   font-weight: 800;
   font-size: 40px;
@@ -128,4 +162,8 @@ li{
   }
 }
 
+.surf,
+.travel{
+  padding: 160px 0 120px;
+}
 

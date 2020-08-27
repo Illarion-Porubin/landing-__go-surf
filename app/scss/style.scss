@@ -468,8 +468,61 @@
   }
 }
 
+.travel{
+  background-image: url(../images/travel-bg.png);
+  background-position: bottom right;
+  background-repeat: no-repeat;
+}
 
 
+.travel-slider{
+  &__head{
+    background-repeat: no-repeat;
+    background-position: top left;
+    min-height: 780px;
+  }
+  &__descr{
+    padding: 160px 0 0 132px;
+    min-height: 320px;
+    margin-top: -230px;
+    background-repeat: no-repeat;
+    background-position: right center;
+    img{
+      padding-left: 24px;
+    }
+  }
+  &__subtitle{
+    text-align: right; // отправляем текст вправо
+    padding: 132px 80px 0 0;
+  }
+  &__btn{
+    text-align: center;
+  }
+}
+
+.travel-slider__info{
+  display: flex;
+  justify-content: space-around;
+}
+
+.travel-slider__info-subtitle{
+  font-size: 18px;
+  line-height: 22px;
+  
+  text-align: right;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  opacity: 0.5;
+  transform: rotate(-90deg); //переворачивает текст по оси x и y
+  font-size: 18px;
+}
+
+.travel-slider__info-title{
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 36px;
+  
+}
 
 
 
