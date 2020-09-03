@@ -3,6 +3,7 @@
 @import "fonts";
 @import "global";
 
+
 .header{
   position: relative;
   height: 100vh;
@@ -132,6 +133,20 @@
   }
 }
 
+.menu-btn{
+  display: none;
+  width: 40px;
+  position: absolute;
+  right: 20px;
+  top: 75px;
+  z-index: 11;
+  &__line{
+    height: 5px;
+    margin-bottom: 5px;
+    background-color: $green;
+  }
+}
+
 .header__date{
   font-weight: 800;
   font-size: 72px;
@@ -247,9 +262,11 @@
 }
 
 .surf-box{
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  &__wrapper{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   &__inner{
     min-height: 750px;
     background: rgba(#1C2121, .85);
@@ -308,6 +325,7 @@
   margin: 0 auto;
   .slick-list{
     min-height: 635px;
+    overflow: visible; //???
   }
   .slick-current{
     .slider-dots__content{
@@ -381,6 +399,7 @@
   height: 23px;
   background-color: $green;
   border-radius: 50%;
+  box-shadow: 0px 0px 35px rgba(74,246, 205, 0.837777);
 }
 
 .slider-dots__content{
@@ -399,7 +418,7 @@
     border-left: 12px solid transparent;
     border-right: 12px solid transparent;
     bottom: -21px;
-    left: 50%;
+    left: calc(50% - 1px);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
   }
@@ -468,14 +487,21 @@
   }
 }
 
-.travel{
+.holder{
   background-image: url(../images/travel-bg.png);
+  &.sleep{
+    background-image: url(../images/frangipani.png);
+  }
   background-position: bottom right;
   background-repeat: no-repeat;
+  .slider-arrows{
+    top: 225px;
+    opacity: .5;
+  }
 }
 
 
-.travel-slider{
+.holder-slider{
   &__head{
     background-repeat: no-repeat;
     background-position: top left;
@@ -487,8 +513,28 @@
     margin-top: -230px;
     background-repeat: no-repeat;
     background-position: right center;
-    img{
-      padding-left: 24px;
+    background-size: contain;//В зависимости от своей формы и формы элемента, рисунок растягивается, чтобы поместиться полностью либо по ширине, либо по высоте.
+
+    //подгоняем лого
+    .descr__head{
+      position: relative;
+      padding-right: 75px;
+      &.descr__head-sleep{
+        padding-right: 215px;
+      }
+      img{
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .holder__star-list{
+        position: absolute;
+        right: 0;
+        top: 0;
+        img{
+          position: static;
+        } 
+      }
     }
   }
   &__subtitle{
@@ -500,33 +546,258 @@
   }
 }
 
-.travel-slider__info{
+.holder-slider__info{
   display: flex;
   justify-content: space-around;
 }
 
-.travel-slider__info-subtitle{
-  font-size: 18px;
+.holder-slider__info-item{
+  min-height: 200px;
+  margin-bottom: 66px;
+  position: relative;
+}
+
+.holder-slider__info-subtitle{
+  position: absolute;
   line-height: 22px;
-  
-  text-align: right;
   letter-spacing: 8px;
-  text-transform: uppercase;
   opacity: 0.5;
   transform: rotate(-90deg); //переворачивает текст по оси x и y
   font-size: 18px;
+  top: 97px;
+  left: -97px;
+  width: 200px;
+  height: 0;
+  white-space: nowrap; //чтобы слова не переносились
+  text-align: right;
 }
 
-.travel-slider__info-title{
-  font-weight: 800;
+.holder-slider__info-title{
   font-size: 40px;
   line-height: 36px;
+  font-weight: 800;
+  padding-left: 40px;
+  position: relative;
+  .holder-pricing__span{
+    font-size: 14px;
+    line-height: 36px;
+    text-align: right;
+    letter-spacing: 5.25px;
+    opacity: 0.75;
+    font-weight: 400;
+    position: absolute;
+    bottom: -28px;
+    right: 0;
+  }
+}
+
+.shop{
+  background-image: url(../images/shop-bg.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  .slider-arrows{
+    opacity: .25;
+  }
+}
+
+.shop__slider{
+  padding-left: 132px;
+}
+
+.shop__slider-inner{
+  display: flex;
+}
+
+.shop__slider-info{
+  max-width: 480px;
+  width: 100%;
+  margin-right: 40px;
+  padding-top: 150px;
+} 
+
+.shop__slider-head-shop{
+  max-width: 340px;
+  margin-bottom: 47px;
+}
+
+.holder__star-list{
+  margin-left: -9px;
+}
+
+.shop__slider-price{
+  font-weight: 800;
+  font-size: 32px;  
+  line-height: 40px;
+  margin-bottom: 64px;
+  sup{
+    font-size: 18px;
+    padding-left: 2px;
+  }
+}
+
+.shop__slider-content{
+  padding-left: 170px;
+  display: flex;
+  align-items: flex-end;//опускаем элементы вниз
+}
+
+.shop__extras{
+  padding-left: 150px;
+}
+
+.shop__extras-inner{
+  display: flex;
+}
+
+.shop__extras-title{
+  font-size: 28px;
+  line-height: 40px;
+  margin-bottom: 25px;
+  font-weight: 800;
+}
+
+.shop__extras-box{
+  text-align: center;
+  margin-right: 57px;
+}
+
+.shop__extras-img{
+  min-height: 105px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 35px;
+}
+
+.shop__extras-name{
+  line-height: 22px;
+  font-size: 18px;
+  opacity: 0.5;
+  letter-spacing: 8px;
+  margin-bottom: 16px;
+  width: 165px;
+}
+
+.shop__extras-price{
+  font-size: 18px;
+  line-height: 40px;
+  font-weight: 800;
+}
+
+.surfboard{
+  position: relative;
+}
+
+
+.surfboard-box{
+  position: absolute;
   
 }
 
+.surfboard__position--1{
+  right: 40px;
+  top: 215px;
+}
+.surfboard__position--2{
+  left: -6px;
+  top: 350px;
+}
+.surfboard__position--3{
+  bottom: 70px;
+  left: 52px;
+  .surfboard-box__content{
+    padding-left: 0;
+    padding-right: 104px;
+    top: -15px;
+    left: -395px;
+    &::before{
+      content: "";  
+      position: absolute;
+      width: 80px;
+      height: 1px;
+      background-color: #fff;
+      right: 0;
+      left: auto;
+      top: 50%;
+    }
+  }
+}
+.surfboard-box__circle{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: relative;
+  background-color: #fff;
+  cursor: pointer;
+  &.active{
+    .circle-row{
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+  }
+}
+
+// делаем + на доске
+.circle-row{
+  background-color: $green;
+  position: absolute;
+  width: 12px;
+  height: 2px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  & + .circle-row{
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+}
+
+//появление текста
+.surfboard-box__circle.active + .surfboard-box__content{
+  display: block;
+}
+
+.surfboard-box__content{
+  display: none;
+  position: absolute;
+  width: 359px;
+  line-height: 24px;
+  font-size: 24px;
+  font-weight: 800;
+  padding-left: 104px;
+  top: -15px;
+  left: 40px;
+  &::before{
+    content: "";  
+    position: absolute;
+    width: 80px;
+    height: 1px;
+    background-color: #fff;
+    left: 0;
+    top: 50%;
+  }
+}
 
 
+.footer{
+  text-align: center;
+  padding: 285px 0 34px;
+  .btn{
+    span{
+      padding: 17px 17px 15px;
+      &::after{
+        display: none;
+      }  
+    }
+  }
+}
 
+.footer__copy{
+  padding-top: 27px;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 1.05px;
+  opacity: 0.5;
+  font-weight: 300;
+}
 
 
 @import "media";
