@@ -13,6 +13,8 @@ body{
   background-color: #171919;
   color: #fff;
   text-transform: uppercase;
+  min-width: 320px;//для анимации
+  overflow-x: hidden;// для анимации
 }
 
 a{
@@ -75,12 +77,15 @@ li{
 }
 
 .title{
-  span{
+  div{
     font-size: 200px;
     color: rgba(#fff, .02);
     font-weight: 800;
     position: relative;
     transform: translateX(-50px);// смещаем текст по X влево на -50px, нужно указывать display: inline-block, а то не будет работать
+    display: inline-block;
+  }
+  span{
     display: inline-block;
   }
   //если хотим позиционировать какой-то объект, то используем position
@@ -169,7 +174,7 @@ li{
 
 .holder{
   padding-bottom: 265px;
-  margin-bottom: 35px;
+
 }
 
 //калькулятор цен и ночей 

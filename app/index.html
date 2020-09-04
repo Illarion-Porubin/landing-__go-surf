@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Go-Surf</title>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,300;0,400;0,500;0,600;0,800;1,300;1,400;1,500;1,600;1,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/libs/animate.css">
   <link rel="stylesheet" href="css/style.min.css">
-  <link rel="stylesheet" href="../node_modules/wow.js/css/libs/animate.css">
 </head>
 <body>
   
@@ -42,7 +42,7 @@
       <div class="menu-btn__line"></div>
     </div>
     <div class="header__aside">
-      <div class="logo wow pulse">
+      <div class="logo" >
         <a href="#">
           <img src="images/logo.svg" alt="">
         </a>
@@ -70,7 +70,7 @@
       <div class="header__search">
         <img src="images/search.svg" alt="">
       </div>
-      <div class="header__date">
+      <div class="header__date animate__animated animate__pulse animate__infinite">
         20
         <span>06 | 2018</span>
       </div>
@@ -82,7 +82,7 @@
       <div class="header__slider-item header__slider-item">
         <div class="slider-item__info">
           <div class="slider-item__info-suptitle headline-left">Surf</div>
-          <div class="slider-item__info-title">North Shore</div>
+          <div class="slider-item__info-title  wow fadeInRight">North Shore</div> 
           <div class="slider-item__info-suptext headline-left">Condition</div>
           <div class="slider-item__info-text">Radical</div>
           <a href="#" class="slider-item__info-link">
@@ -125,7 +125,7 @@
       </div>       
     </div>
 
-    <div class="slider-dotshead">
+    <div class="slider-dotshead wow fadeInUp" data-wow-delay=".55s">
       <div class="slider-dots__item">
         <div class="dots-box">
           <div class="dots-box__number">01</div>
@@ -156,20 +156,20 @@
   <div class="container">
     <section class="surf">
       <div class="title">
-        <span>
-          surf 
+        <div>
+          <span class="wow fadeInLeft" data-wow-offset="400">surf</span>
           <h3>surf</h3>
-        </span>
+        </div>
       </div>
       <div class="surf__subtitle">
-        <div class="subtitle animate__animated animate__fadeInRight" animated__offset="100">
+        <div class="subtitle wow fadeInRight" animated__offset="400">
           <div class="headline-left">Current location</div>
           <div class="subtitle__head">California <span>|</span> USA</div>
         </div>
       </div>
 
 
-      <div class="slider-map">
+      <div class="slider-map wow animate__zoomInDown" data-wow-offset="300" data-wow-duration="1s">
         <div class="slider-dots slider-dots--1">
           <div class="slider-dots__circle"></div>
           <div class="slider-dots__content">
@@ -423,7 +423,7 @@
 
        <div class="surf-slider">
         <div class="surf-box">
-          <div class="surf-box__wrapper" style="background-image: url(images/slide-1.jpg);">
+          <div class="surf-box__wrapper wow fadeInUp" data-wow-offset="200" data-wow-delay=".15s" style="background-image: url(images/slide-1.jpg);">
             <div class="surf-box__inner">
               <div class="surf-box__inner-title">Malibu
               Beach</div>
@@ -437,7 +437,7 @@
           </div>
         </div>
         <div class="surf-box">
-          <div class="surf-box__wrapper" style="background-image: url(images/slide-2.jpg);">
+          <div class="surf-box__wrapper wow fadeInDown" data-wow-offset="200" data-wow-delay=".25s" style="background-image: url(images/slide-2.jpg);">
             <div class="surf-box__inner">
               <div class="surf-box__inner-title">Airlie
                   Beach</div>
@@ -451,7 +451,7 @@
           </div>
        </div>
        <div class="surf-box">
-         <div class="surf-box__wrapper" style="background-image: url(images/slide-3.jpg);">
+         <div class="surf-box__wrapper wow fadeInUp" data-wow-offset="200" data-wow-delay=".35s" style="background-image: url(images/slide-3.jpg);">
             <div class="surf-box__inner">
               <div class="surf-box__inner-title">Cloud
                 Nine</div>
@@ -465,7 +465,7 @@
          </div>
        </div>
        <div class="surf-box">
-         <div class="surf-box__wrapper" style="background-image: url(images/slide-4.jpg);">
+         <div class="surf-box__wrapper wow fadeInDown" data-wow-offset="200" data-wow-delay=".45s" style="background-image: url(images/slide-4.jpg);">
           <div class="surf-box__inner">
             <div class="surf-box__inner-title">Vieux
               Boucau</div>
@@ -540,27 +540,72 @@
     <section class="holder">
       <div class="container">
         <div class="title">
-          <span>
-            travel 
+          <div>
+            <span class="wow fadeInLeft" data-wow-offset="400">travel</span>
             <h3>travel</h3>
-          </span>
+          </div>
         </div>
         <div class="holder__slider">
           <div class="holder__slider-item holder-slider">
             <div class="holder-slider__head" style="background-image: url(images/travelslider-bg.png);"> 
               <div class="holder-slider__subtitle">
-                <div class="subtitle">
+                <div class="subtitle wow fadeInRight" animated__offset="400">
                   <div class="headline-left">Shore</div>
                   <div class="subtitle__head">Airlie Beach <span>|</span> Australia</div>
                 </div>
               </div>
             </div>
-            <div class="holder-slider__descr" style="background-image: url(images/virgin.png);">
+            <div class="holder-slider__descr wow fadeInLeft" data-wow-offset="100">
               <div class="descr">
                 <div class="headline-right">Airline</div>
-                <div class="descr__head">Virgin Australia <img src="images/avia-logo.png" alt=""></div>
+                <div class="descr__head">Virgin Australia <img src="images/avia-logo.png" alt="">
+                </div>                
               </div>
             </div>
+            <div class="holder-slider__plane wow fadeInRight" data-wow-offset="100" style="background-image: url(images/virgin.png);"></div>
+            <div class="holder-slider__info">
+              <div class="holder-slider__info-item wow fadeInUp" data-wow-offset="400" data-wow-delay=".15s">
+                <div class="holder-slider__info-subtitle">Destination</div>
+                <div class="holder-slider__info-title">Queensland<br>Australia</div>
+              </div>
+              <div class="holder-slider__info-item wow fadeInUp" data-wow-offset="400" data-wow-delay=".25s">
+                <div class="holder-slider__info-subtitle">Distance</div>
+                <div class="holder-slider__info-title">7,065 Miles</div>
+              </div>
+              <div class="holder-slider__info-item wow fadeInUp" data-wow-offset="400" data-wow-delay=".35s">
+                <div class="holder-slider__info-subtitle">Travel Time</div>
+                <div class="holder-slider__info-title">23 Hours<br>5 Minutes</div>
+              </div>
+              <div class="holder-slider__info-item wow fadeInUp" data-wow-offset="400" data-wow-delay=".45s">
+                <div class="holder-slider__info-subtitle">Pricing</div>
+                <div class="holder-slider__info-title">$1,976 USD
+                   <span class="holder-pricing__span">Round Trip</span>
+                </div>
+              </div>
+            </div>
+            <div class="holder-slider__btn">
+              <a class="btn" href="#">
+              Book<span>Flight</span>
+              </a>
+            </div>
+          </div>
+          <div class="holder__slider-item holder-slider">
+            <div class="holder-slider__head" style="background-image: url(images/travelslider-bg.png);"> 
+              <div class="holder-slider__subtitle">
+                <div class="subtitle wow fadeInRight" animated__offset="400">
+                  <div class="headline-left">Shore</div>
+                  <div class="subtitle__head">Airlie Beach <span>|</span> Australia</div>
+                </div>
+              </div>
+            </div>
+            <div class="holder-slider__descr wow fadeInLeft" data-wow-offset="100">
+              <div class="descr">
+                <div class="headline-right">Airline</div>
+                <div class="descr__head">Virgin Australia <img src="images/avia-logo.png" alt="">
+                </div>                
+              </div>
+            </div>
+            <div class="holder-slider__plane wow fadeInRight" data-wow-offset="100" style="background-image: url(images/virgin.png);"></div>
             <div class="holder-slider__info">
               <div class="holder-slider__info-item">
                 <div class="holder-slider__info-subtitle">Destination</div>
@@ -590,18 +635,20 @@
           <div class="holder__slider-item holder-slider">
             <div class="holder-slider__head" style="background-image: url(images/travelslider-bg.png);"> 
               <div class="holder-slider__subtitle">
-                <div class="subtitle">
+                <div class="subtitle wow fadeInRight" animated__offset="400">
                   <div class="headline-left">Shore</div>
                   <div class="subtitle__head">Airlie Beach <span>|</span> Australia</div>
                 </div>
               </div>
             </div>
-            <div class="holder-slider__descr" style="background-image: url(images/virgin.png);">
+            <div class="holder-slider__descr wow fadeInLeft" data-wow-offset="100">
               <div class="descr">
                 <div class="headline-right">Airline</div>
-                <div class="descr__head">Virgin Australia <img src="images/avia-logo.png" alt=""></div>
+                <div class="descr__head">Virgin Australia <img src="images/avia-logo.png" alt="">
+                </div>                
               </div>
             </div>
+            <div class="holder-slider__plane wow fadeInRight" data-wow-offset="100" style="background-image: url(images/virgin.png);"></div>
             <div class="holder-slider__info">
               <div class="holder-slider__info-item">
                 <div class="holder-slider__info-subtitle">Destination</div>
@@ -631,18 +678,20 @@
           <div class="holder__slider-item holder-slider">
             <div class="holder-slider__head" style="background-image: url(images/travelslider-bg.png);"> 
               <div class="holder-slider__subtitle">
-                <div class="subtitle">
+                <div class="subtitle wow fadeInRight" animated__offset="400">
                   <div class="headline-left">Shore</div>
                   <div class="subtitle__head">Airlie Beach <span>|</span> Australia</div>
                 </div>
               </div>
             </div>
-            <div class="holder-slider__descr" style="background-image: url(images/virgin.png);">
+            <div class="holder-slider__descr wow fadeInLeft" data-wow-offset="100">
               <div class="descr">
                 <div class="headline-right">Airline</div>
-                <div class="descr__head">Virgin Australia <img src="images/avia-logo.png" alt=""></div>
+                <div class="descr__head">Virgin Australia <img src="images/avia-logo.png" alt="">
+                </div>                
               </div>
             </div>
+            <div class="holder-slider__plane wow fadeInRight" data-wow-offset="100" style="background-image: url(images/virgin.png);"></div>
             <div class="holder-slider__info">
               <div class="holder-slider__info-item">
                 <div class="holder-slider__info-subtitle">Destination</div>
@@ -672,18 +721,20 @@
           <div class="holder__slider-item holder-slider">
             <div class="holder-slider__head" style="background-image: url(images/travelslider-bg.png);"> 
               <div class="holder-slider__subtitle">
-                <div class="subtitle">
+                <div class="subtitle wow fadeInRight" animated__offset="400">
                   <div class="headline-left">Shore</div>
                   <div class="subtitle__head">Airlie Beach <span>|</span> Australia</div>
                 </div>
               </div>
             </div>
-            <div class="holder-slider__descr" style="background-image: url(images/virgin.png);">
+            <div class="holder-slider__descr wow fadeInLeft" data-wow-offset="100">
               <div class="descr">
                 <div class="headline-right">Airline</div>
-                <div class="descr__head">Virgin Australia <img src="images/avia-logo.png" alt=""></div>
+                <div class="descr__head">Virgin Australia <img src="images/avia-logo.png" alt="">
+                </div>                
               </div>
             </div>
+            <div class="holder-slider__plane wow fadeInRight" data-wow-offset="100" style="background-image: url(images/virgin.png);"></div>
             <div class="holder-slider__info">
               <div class="holder-slider__info-item">
                 <div class="holder-slider__info-subtitle">Destination</div>
@@ -713,18 +764,20 @@
           <div class="holder__slider-item holder-slider">
             <div class="holder-slider__head" style="background-image: url(images/travelslider-bg.png);"> 
               <div class="holder-slider__subtitle">
-                <div class="subtitle">
+                <div class="subtitle wow fadeInRight" animated__offset="400">
                   <div class="headline-left">Shore</div>
                   <div class="subtitle__head">Airlie Beach <span>|</span> Australia</div>
                 </div>
               </div>
             </div>
-            <div class="holder-slider__descr" style="background-image: url(images/virgin.png);">
+            <div class="holder-slider__descr wow fadeInLeft" data-wow-offset="100">
               <div class="descr">
                 <div class="headline-right">Airline</div>
-                <div class="descr__head">Virgin Australia <img src="images/avia-logo.png" alt=""></div>
+                <div class="descr__head">Virgin Australia <img src="images/avia-logo.png" alt="">
+                </div>                
               </div>
             </div>
+            <div class="holder-slider__plane wow fadeInRight" data-wow-offset="100" style="background-image: url(images/virgin.png);"></div>
             <div class="holder-slider__info">
               <div class="holder-slider__info-item">
                 <div class="holder-slider__info-subtitle">Destination</div>
@@ -754,18 +807,20 @@
           <div class="holder__slider-item holder-slider">
             <div class="holder-slider__head" style="background-image: url(images/travelslider-bg.png);"> 
               <div class="holder-slider__subtitle">
-                <div class="subtitle">
+                <div class="subtitle wow fadeInRight" animated__offset="400">
                   <div class="headline-left">Shore</div>
                   <div class="subtitle__head">Airlie Beach <span>|</span> Australia</div>
                 </div>
               </div>
             </div>
-            <div class="holder-slider__descr" style="background-image: url(images/virgin.png);">
+            <div class="holder-slider__descr wow fadeInLeft" data-wow-offset="100">
               <div class="descr">
                 <div class="headline-right">Airline</div>
-                <div class="descr__head">Virgin Australia <img src="images/avia-logo.png" alt=""></div>
+                <div class="descr__head">Virgin Australia <img src="images/avia-logo.png" alt="">
+                </div>                
               </div>
             </div>
+            <div class="holder-slider__plane wow fadeInRight" data-wow-offset="100" style="background-image: url(images/virgin.png);"></div>
             <div class="holder-slider__info">
               <div class="holder-slider__info-item">
                 <div class="holder-slider__info-subtitle">Destination</div>
@@ -795,18 +850,20 @@
           <div class="holder__slider-item holder-slider">
             <div class="holder-slider__head" style="background-image: url(images/travelslider-bg.png);"> 
               <div class="holder-slider__subtitle">
-                <div class="subtitle">
+                <div class="subtitle wow fadeInRight" animated__offset="400">
                   <div class="headline-left">Shore</div>
                   <div class="subtitle__head">Airlie Beach <span>|</span> Australia</div>
                 </div>
               </div>
             </div>
-            <div class="holder-slider__descr" style="background-image: url(images/virgin.png);">
+            <div class="holder-slider__descr wow fadeInLeft" data-wow-offset="100">
               <div class="descr">
                 <div class="headline-right">Airline</div>
-                <div class="descr__head">Virgin Australia <img src="images/avia-logo.png" alt=""></div>
+                <div class="descr__head">Virgin Australia <img src="images/avia-logo.png" alt="">
+                </div>                
               </div>
             </div>
+            <div class="holder-slider__plane wow fadeInRight" data-wow-offset="100" style="background-image: url(images/virgin.png);"></div>
             <div class="holder-slider__info">
               <div class="holder-slider__info-item">
                 <div class="holder-slider__info-subtitle">Destination</div>
@@ -833,47 +890,7 @@
               </a>
             </div>
           </div>
-          <div class="holder__slider-item holder-slider">
-            <div class="holder-slider__head" style="background-image: url(images/travelslider-bg.png);"> 
-              <div class="holder-slider__subtitle">
-                <div class="subtitle">
-                  <div class="headline-left">Shore</div>
-                  <div class="subtitle__head">Airlie Beach <span>|</span> Australia</div>
-                </div>
-              </div>
-            </div>
-            <div class="holder-slider__descr" style="background-image: url(images/virgin.png);">
-              <div class="descr">
-                <div class="headline-right">Airline</div>
-                <div class="descr__head">Virgin Australia <img src="images/avia-logo.png" alt=""></div>
-              </div>
-            </div>
-            <div class="holder-slider__info">
-              <div class="holder-slider__info-item">
-                <div class="holder-slider__info-subtitle">Destination</div>
-                <div class="holder-slider__info-title">Queensland<br>Australia</div>
-              </div>
-              <div class="holder-slider__info-item">
-                <div class="holder-slider__info-subtitle">Distance</div>
-                <div class="holder-slider__info-title">7,065 Miles</div>
-              </div>
-              <div class="holder-slider__info-item">
-                <div class="holder-slider__info-subtitle">Travel Time</div>
-                <div class="holder-slider__info-title">23 Hours<br>5 Minutes</div>
-              </div>
-              <div class="holder-slider__info-item">
-                <div class="holder-slider__info-subtitle">Pricing</div>
-                <div class="holder-slider__info-title">$1,976 USD
-                   <span class="holder-pricing__span">Round Trip</span>
-                </div>
-              </div>
-            </div>
-            <div class="holder-slider__btn">
-              <a class="btn" href="#">
-              Book<span>Flight</span>
-              </a>
-            </div>
-          </div>
+          
         </div>
       </div>
     </section>
@@ -881,22 +898,22 @@
     <section class="holder sleep">
       <div class="container">
         <div class="title">
-          <span>
-            sleep 
+          <div>
+            <span class="wow fadeInLeft" data-wow-offset="300">sleep</span>  
             <h3>sleep</h3>
-          </span>
+          </div>
         </div>
         <div class="holder__slider">
           <div class="holder__slider-item holder-slider">
             <div class="holder-slider__head" style="background-image: url(images/sleepslider-bg.png);"> 
               <div class="holder-slider__subtitle">
-                <div class="subtitle">
+                <div class="subtitle wow fadeInRight" animated__offset="400">
                   <div class="headline-left">Resorts</div>
                   <div class="subtitle__head">Auberge<span>|</span> Australia</div>
                 </div>
               </div>
             </div>
-            <div class="holder-slider__descr" style="background-image: url(images/hammock.png);">
+            <div class="holder-slider__descr wow animate__fadeIn" data-wow-offset="300" style="background-image: url(images/hammock.png);">
               <div class="descr">
                 <div class="headline-right">Rating</div>
                 <div class="descr__head descr__head-sleep">Excellent 
@@ -911,11 +928,11 @@
               </div>
             </div>
             <div class="holder-slider__info">
-              <div class="holder-slider__info-item">
+              <div class="holder-slider__info-item wow fadeInUp" data-wow-offset="200" data-wow-delay=".15s">
                 <div class="holder-slider__info-subtitle">Resort</div>
                 <div class="holder-slider__info-title">Auberge<br>Australia</div>
               </div>
-              <div class="holder-slider__info-item">
+              <div class="holder-slider__info-item wow fadeInUp" data-wow-offset="200" data-wow-delay=".25s">
                 <div class="holder-slider__info-subtitle"># of Nights</div>
                 <div class="holder-slider__info-title">
                   <div class="quantity">
@@ -924,7 +941,7 @@
                   Nights
                 </div>
               </div>
-              <div class="holder-slider__info-item">
+              <div class="holder-slider__info-item wow fadeInUp" data-wow-offset="200" data-wow-delay=".35s">
                 <div class="holder-slider__info-subtitle"># of Guests</div>
                 <div class="holder-slider__info-title">
                   <div class="quantity">
@@ -933,7 +950,7 @@
                   Guests
                 </div>
               </div>
-              <div class="holder-slider__info-item">
+              <div class="holder-slider__info-item wow fadeInUp" data-wow-offset="200" data-wow-delay=".45s">
                 <div class="holder-slider__info-subtitle">Pricing</div>
                 <div class="holder-slider__info-title">
                   <span class="summ" data-nights="55" data-guests="25"></span>
@@ -1381,20 +1398,20 @@
     
     <section class="shop">
       <div class="title">
-        <span>
-          shop 
+        <div>
+          <span class="wow fadeInLeft" data-wow-offset="300">shop</span>  
           <h3>shop</h3>
-        </span>
+        </div>
       </div>
       <div class="shop__slider">
 
         <div class="shop__slider-item">
 
           <div class="shop__slider-inner">
-            <div class="shop__slider-info">
+            <div class="shop__slider-info wow animate__fadeInLeft" data-wow-offset="400">
               <div class="descr">
                 <div class="headline-right">Style</div>
-                <div class="descr__head descr__head-sleep">North Nugget TT
+                <div class="descr__head descr__head-sleep ">North Nugget TT
                   Surfboard 
                 </div>
               </div>
@@ -1415,7 +1432,7 @@
               </div>
             </div>
             <div class="shop__slider-content">
-              <div class="surfboard">
+              <div class="surfboard wow fadeInUp" data-wow-offset="400">
                 <img src="images/surfboard.png" alt="">
                 <div class="surfboard-box surfboard__position--1">
                   <div class="surfboard-box__circle">
@@ -1452,7 +1469,7 @@
                 <div class="shop__extras-title">
                   Extras
                 </div>
-                <div class="shop__extras-inner">
+                <div class="shop__extras-inner wow fadeInRight" data-wow-offset="200">
                   <div class="shop__extras-box">
                     <div class="shop__extras-img">
                       <img src="images/wax.png" alt="">

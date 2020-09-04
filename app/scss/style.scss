@@ -268,7 +268,7 @@
     background-size: cover;
   }
   &__inner{
-    min-height: 750px;
+    height: 750px;
     background: rgba(#1C2121, .85);
     position: relative;
     transition: all .5s;
@@ -288,6 +288,7 @@
   padding: 72px 0 0 40px;
   width: 140px;
 }
+
 
 .surf-box__inner-location{
   font-size: 18px;
@@ -402,6 +403,8 @@
   box-shadow: 0px 0px 35px rgba(74,246, 205, 0.837777);
 }
 
+
+
 .slider-dots__content{
   display: none;
   background: rgba(#000, .7);
@@ -409,6 +412,7 @@
   position: absolute;
   bottom: 35px;
   transform: translate(-50%);
+  z-index: 1;
   &::before{
     content: "";
     position: absolute;
@@ -501,6 +505,16 @@
 }
 
 
+
+.holder-slider__plane{
+  min-height: 780px;
+  min-height: 320px;
+  margin-top: -400px;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;//В зависимости от своей формы и формы элемента, рисунок растягивается, чтобы поместиться полностью либо по ширине, либо по высоте.
+}
+
 .holder-slider{
   &__head{
     background-repeat: no-repeat;
@@ -549,6 +563,7 @@
 .holder-slider__info{
   display: flex;
   justify-content: space-around;
+  margin-top: 100px;
 }
 
 .holder-slider__info-item{
@@ -798,6 +813,7 @@
   opacity: 0.5;
   font-weight: 300;
 }
+
 
 
 @import "media";
